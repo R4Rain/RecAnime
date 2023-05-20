@@ -1,2 +1,2 @@
 # RecAnime
-Anime Recommender
+Anime Recommender.
