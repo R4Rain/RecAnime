@@ -1,0 +1,147 @@
+/* Main CSS */
+._brand{
+    font-family: 'Gill Sans', sans-serif;
+    font-weight: bold;
+    color: #000;
+}
+
+#wrapper {
+    overflow-x: hidden;
+}
+  
+#page-content-wrapper {
+    min-width: 100vw;
+}
+  
+@media (min-width: 768px) {
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    width: 5px;
+    background: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 1em;
+    background-color: #ddd;
+    outline: 1px solid slategrey;
+    border-radius: 1rem;
+}
+  
+.text-small {
+    font-size: 0.9rem;
+}
+
+.messages-box,
+.chat-box {
+    height: 82vh;
+    overflow-y: scroll;
+}
+
+.message{
+    max-width: 65%;
+    width: fit-content;
+}
+
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+._media-content{
+    display: flex;
+    align-items: center;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.4rem;
+    width: fit-content;
+}
+
+input::placeholder {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+@keyframes bubble-load{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    25%{
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100%{
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+.loading-bubble{
+    display: inline-block;
+    width: 0.9rem;
+    height: 0.9rem;
+    margin: 0.3rem 0.3rem;
+    transform: scale(0);
+    opacity: 0;
+    background: #b0b0b0;
+    animation: bubble-load 1s infinite backwards;
+    border-radius: 50%;
+}
+
+.loading-bubble:nth-child(2){
+    animation-delay: .18s;
+}
+
+.loading-bubble:nth-child(3){
+    animation-delay: .36s;
+}
+
+._anime-title{
+    font-size: 0.9rem;
+    margin-bottom: 0.15rem;
+}
+
+._anime-subtitle{
+    font-size: 0.8rem;
+}
+
+._anime-synopsis{
+    font-size: 0.7rem;
+    overflow:hidden;
+    -webkit-box-orient: vertical;
+    display: block;
+    display: -webkit-box;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+}
+
+._anime-picture{
+    height: 100%;
+    width: 100%;
+    max-width: 175px;
+    object-fit: cover;
+}
+
+/* Color pallete */
+._color-orange{
+    color: #F79540;
+}
+
+._bg-primary{
+    background-color: #142850;
+    color: #fff;
+}
+
+._bg-main{
+    background-color: #27496D;
+}

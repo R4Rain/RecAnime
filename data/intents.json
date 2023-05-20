@@ -1,0 +1,53 @@
+{
+    "intents": [{
+            "tag": "greetings",
+            "patterns": [
+                "hi","hello","hi there", "hey", "holla", "oi", "ohayo",
+                "good morning", "good evening"
+            ]
+        },
+        {
+            "tag": "introduce",
+            "patterns": [
+                "introduce yourself", "who are you", "who", "what are you"
+            ]
+        },
+        {
+            "tag": "help_me",
+            "patterns":[
+                "help me", "guide me", "please help", "get started"
+            ]
+        },
+        {
+            "tag": "recommend_anime",
+            "patterns": [
+                "Can you recommend anime similar with {}?", 
+                "Is there anime with {}?", 
+                "Suggest anime that related to {}?",
+                "Do you know any anime that focuses on {}?",
+                "I am looking for anime that has {}",
+                "Do you have any anime recommendations?",
+                "I enjoyed watching {}, can you recommend something similar?",
+                "I loved {}, can you suggest something similar?",
+                "I am big fan of {}",
+                "Recommend me an anime",
+                "If I liked {}, what other anime would I enjoy?",
+                "Are there any anime like {}?",
+                "Recommend me"
+            ]
+        },
+        {
+            "tag": "search",
+            "patterns": [
+                "search", "look up", "want to find", "search keyword"
+            ]
+        },
+        {
+            "tag": "thanks",
+            "patterns": [
+                "Thanks", "okay","Thank you","thankyou", "Thats helpful", "ok", "Thanks for helping me", 
+                "wow", "great", "Awesome", "nice"
+            ]
+        }
+    ]
+}
