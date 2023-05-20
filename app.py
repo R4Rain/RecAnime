@@ -15,7 +15,7 @@ def numberFormat(value):
 
 @app.route('/', methods=['GET'])
 def index():
-    return render_template("index.html", chats=chatbot.chats)
+    return render_template("index.html", chats=chatbot.chats, API_URL = request.host_url)
 
 @app.route('/get', methods=['GET'])
 def chat():
