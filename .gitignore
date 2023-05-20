@@ -1,0 +1,12 @@
+*
+!/data
+!/static
+!/templates
+!app.py
+!chatbot_model.h5
+!chatbot.py
+!preprocessing.ipynb
+!requirements.txt
+!train_model.py
+!readme.md
+!.gitignore
