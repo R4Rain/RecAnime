@@ -27,4 +27,10 @@ python app.py
 
 Note: You can just run `chatbot.py` to interact with the chatbot without displaying through the website
 
-Python ver: 3.9.13
+My python version: 3.9.13
+
+## Results
+- Simple conversation
+![Image 1](/data/display_img_1.png)
+- Recommendation
+![Image 2](/data/display_img_2.png)
