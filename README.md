@@ -30,7 +30,7 @@ Note: You can just run `chatbot.py` to interact with the chatbot without display
 My python version: 3.9.13
 
 ## Results
-- Simple conversation
+Simple conversation
 ![Image 1](/data/display_img_1.png)
-- Recommendation
+Recommendation
 ![Image 2](/data/display_img_2.png)
