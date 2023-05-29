@@ -23,7 +23,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
-- Open the local host
+- Open the local host `http://127.0.0.1:5000`
 
 Note: You can just run `chatbot.py` to interact with the chatbot without displaying through the website
 
