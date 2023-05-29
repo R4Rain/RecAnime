@@ -26,4 +26,5 @@ python app.py
 - Open the local host
 
 Note: You can just run `chatbot.py` to interact with the chatbot without displaying through the website
+
 Python ver: 3.9.13
