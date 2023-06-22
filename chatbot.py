@@ -4,14 +4,21 @@ import pickle
 import json
 import random
 import re
+import sys
 from datetime import datetime
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel, cosine_similarity
 
 import nltk
+from nltk import pos_tag
+from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 from keras.models import load_model
-import spacy
+
+# Download once
+nltk.download('omw-1.4')
+nltk.download("punkt")
+nltk.download("wordnet")
 
 pd.set_option('mode.chained_assignment', None)
 
@@ -28,7 +35,6 @@ raw_data['cleaned_title_english'] = raw_data['cleaned_title_english'].astype(str
 # Global variables
 # =======================================
 # Spacy NLP model
-NLP = spacy.load("en_core_web_sm")
 lemmatizer = WordNetLemmatizer()
 
 responses = {
@@ -393,6 +399,7 @@ class Chatbot:
             
             self.expected_intent = ''
             
+        
         elif current_intent:
             response = random.choice(responses[current_intent])
             
@@ -440,12 +447,10 @@ def extract_by_commas(text):
     return informations
 
 def extract_noun(text):
-    # Extracting noun phrases...
-    document = NLP(text)
-    noun_phrases = []
-    for chunk in document.noun_chunks:
-        if not any(token.pos_ == 'PRON' for token in chunk):
-            noun_phrases.append(chunk.text)
+    # Extracting noun phrases....
+    words = word_tokenize(text)
+    tagged_words = pos_tag(words)
+    noun_phrases = [word for word, pos in tagged_words if pos.startswith('NN')]
     return noun_phrases
         
 def cleaning_text(text):
